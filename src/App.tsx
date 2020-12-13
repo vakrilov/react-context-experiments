@@ -3,7 +3,7 @@ import "./styles.scss";
 
 const MyButton: React.FC<{ disabled?: boolean }> = (props) => (
   <button {...props} onClick={() => alert("I was clicked")}>
-    {props.children}{" "}
+    {props.children}
   </button>
 );
 
@@ -31,8 +31,8 @@ export default function App() {
 
   return (
     <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
+      <h1>React Context</h1>
+      <h2>Let's have some fun</h2>
 
       <MyButton> Hey there 1</MyButton>
       <MyButton> Hey there 2</MyButton>
