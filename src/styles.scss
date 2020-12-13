@@ -1,0 +1,33 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+button {
+  margin: 1rem;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100vw;
+  height: 100vh;
+  background-color: gray;
+  opacity: 0.7;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  span {
+    font-size: 32px;
+    color: white;
+    font-family: sans-serif;
+  }
+}
+
+.nested {
+  background-color: greenyellow;
+}
