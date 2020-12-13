@@ -7,13 +7,6 @@ const MyButton: React.FC<{ disabled?: boolean }> = (props) => (
   </button>
 );
 
-const SomeComponent: React.FC = (props) => (
-  <div className="nested">
-    <MyButton> Nested 1</MyButton>
-    <MyButton> Nested 2</MyButton>
-  </div>
-);
-
 const Overlay: React.FC<{ visible: boolean; hide: () => void }> = ({
   visible,
   hide
@@ -23,6 +16,15 @@ const Overlay: React.FC<{ visible: boolean; hide: () => void }> = ({
       <span onClick={hide}> Click me to hide the overlay</span>
     </div>
   ) : null;
+
+const SomeComponent: React.FC = (props) => {
+  return (
+    <div className="nested">
+      <MyButton>Nested 1</MyButton>
+      <MyButton>Nested 2</MyButton>
+    </div>
+  );
+};
 
 export default function App() {
   const [showOnboarding, setShowOnboarding] = React.useState(true);
@@ -38,6 +40,8 @@ export default function App() {
       <MyButton> Hey there 4</MyButton>
 
       <SomeComponent />
+      <SomeComponent />
+
       <Overlay visible={showOnboarding} hide={() => setShowOnboarding(false)} />
     </div>
   );
