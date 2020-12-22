@@ -20,12 +20,12 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+}
 
-  span {
-    font-size: 32px;
-    color: white;
-    font-family: sans-serif;
-  }
+.overlay span {
+  font-size: 32px;
+  color: white;
+  font-family: sans-serif;
 }
 
 .nested {
